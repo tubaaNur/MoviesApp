@@ -86,6 +86,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="zGM-qY-lG0"/>
                     <connections>
                         <outlet property="movieCollectionView" destination="DsX-Xi-Mvr" id="LWs-RC-kHv"/>
+                        <segue destination="hVc-eS-VZv" kind="presentation" identifier="toDetay" id="gEE-cI-bCj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,11 +98,42 @@
             <objects>
                 <viewController id="hVc-eS-VZv" customClass="DetailPage" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psH-Bz-Kr9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Gu1-nh-oPP">
+                                <rect key="frame" x="107" y="139" width="200" height="608"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Django" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sr-cV-sjl">
+                                        <rect key="frame" x="18" y="0.0" width="164" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="django" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-YD-lc4">
+                                        <rect key="frame" x="0.0" y="160" width="200" height="300"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeO-Aw-P1K">
+                                        <rect key="frame" x="60" y="560" width="80.5" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JfK-iX-zrO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gu1-nh-oPP" firstAttribute="centerX" secondItem="psH-Bz-Kr9" secondAttribute="centerX" id="lCO-32-ikB"/>
+                            <constraint firstItem="Gu1-nh-oPP" firstAttribute="centerY" secondItem="psH-Bz-Kr9" secondAttribute="centerY" id="ziU-uD-DhL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewFilm" destination="vSF-YD-lc4" id="bkv-kw-L4Z"/>
+                        <outlet property="labelFilm" destination="5Sr-cV-sjl" id="NS4-JY-eap"/>
+                        <outlet property="labelFiyat" destination="QeO-Aw-P1K" id="0G0-w4-3gD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJE-h2-Z1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

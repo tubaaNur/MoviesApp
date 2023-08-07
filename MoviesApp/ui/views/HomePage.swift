@@ -33,10 +33,25 @@ class HomePage: UIViewController {
         movieList.append(m4)
         movieList.append(m5)
         movieList.append(m6)
+        
+        let tasarım = UICollectionViewFlowLayout()
+        tasarım.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        tasarım.minimumInteritemSpacing = 10
+        tasarım.minimumLineSpacing = 10
+        
+        // 10 X 10 X 10 = 30 BOŞLUK
+        // 15X 15 X 15 x 15 = 50 BOŞLUK
+        let ekranGenislik = UIScreen.main.bounds.width
+        let itemGenislik = (ekranGenislik-30) / 2
+        
+        tasarım.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 1.6)
+        movieCollectionView.collectionViewLayout = tasarım
+        
+        
     }
 }
 
-extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, HucreProtocol {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieList.count
     }
@@ -51,8 +66,32 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource {
         cell.layer.borderWidth = 0.3
         cell.layer.cornerRadius = 10.0
         
+        cell.hucreProtocol = self
+        cell.indexPath = indexPath
+        
         
         return cell
+    }
+    
+    func sepeteEkleTikla(indexPath: IndexPath) {
+        let movie = movieList[indexPath.row]
+        print("\(movie.name!) sepete eklendi.")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie = movieList[indexPath.row]
+        performSegue(withIdentifier: "toDetay", sender: movie)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay" {
+            if let film = sender as? Movies{
+                
+                let gidilecekVc = segue.destination as! DetailPage
+                gidilecekVc.film = film
+            }
+        }
     }
 
 }
