@@ -22,10 +22,12 @@ class MoviesCell: UICollectionViewCell {
     var hucreProtocol:HucreProtocol?
     var indexPath:IndexPath?
     
+    @IBOutlet weak var addToBaskett: UIButton!
     @IBOutlet weak var imageViewMovie: UIImageView!
     
     @IBAction func btnAddBasket(_ sender: Any) {
         hucreProtocol?.sepeteEkleTikla(indexPath: indexPath!)
+        
     }
     
     

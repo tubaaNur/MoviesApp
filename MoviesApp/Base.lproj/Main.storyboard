@@ -67,6 +67,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="addToBaskett" destination="GBF-kJ-iAT" id="f8i-WZ-zyd"/>
                                             <outlet property="imageViewMovie" destination="YfV-UK-VSB" id="NVe-40-rbq"/>
                                             <outlet property="labelPay" destination="ueZ-nQ-gdW" id="UEo-gV-B1S"/>
                                         </connections>

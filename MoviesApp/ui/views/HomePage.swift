@@ -15,6 +15,8 @@ class HomePage: UIViewController {
     
     var movieList = [Movies]()
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,9 +61,11 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
         let movie = movieList[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "moviesCell", for: indexPath) as! MoviesCell
-        
         cell.imageViewMovie.image = UIImage(named: movie.image!)
-        cell.labelPay.text = "\(movie.pay!)$"
+        let payTitle = NSLocalizedString("payTitle", comment: "")
+        cell.labelPay.text = "\(movie.pay!)" + payTitle
+        let addToBasketTitle = NSLocalizedString("addToBasket", comment: "")
+        cell.addToBaskett.setTitle(addToBasketTitle, for: .normal)
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.3
         cell.layer.cornerRadius = 10.0
