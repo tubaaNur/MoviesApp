@@ -57,14 +57,15 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieList.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let movie = movieList[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "moviesCell", for: indexPath) as! MoviesCell
         cell.imageViewMovie.image = UIImage(named: movie.image!)
-        let payTitle = NSLocalizedString("payTitle", comment: "")
+        let payTitle = String(localized: "payTitle", comment: "")
         cell.labelPay.text = "\(movie.pay!)" + payTitle
-        let addToBasketTitle = NSLocalizedString("addToBasket", comment: "")
+        let addToBasketTitle = String(localized:"addToBasket", comment: "")
         cell.addToBaskett.setTitle(addToBasketTitle, for: .normal)
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.3
