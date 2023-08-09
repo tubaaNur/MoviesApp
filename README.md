@@ -3,8 +3,11 @@
 ## Overview
 
 The Movie Bucket app is a simple iOS application written in Swift that allows users to view a collection of movies, see their details such as poster and price, and has the functionality to add movies to a bucket (shopping cart).
+
+
 ##Demo
 <img src="https://github.com/tubaaNur/MoviesApp/blob/main/Recording.gif" width="200">
+
 ## Features
 
 1.  *Movie List Screen*
