@@ -50,6 +50,7 @@
 		293C73C82A7C203C0028B2BB = {
 			isa = PBXGroup;
 			children = (
+				29B38B392A843590005CD156 /* README.md */,
 				293C73D32A7C203C0028B2BB /* MoviesApp */,
 				293C73D22A7C203C0028B2BB /* Products */,
 			);
@@ -75,7 +76,6 @@
 				293C73DF2A7C203E0028B2BB /* LaunchScreen.storyboard */,
 				293C73E22A7C203E0028B2BB /* Info.plist */,
 				293C755D2A82926F0028B2BB /* Localizable.strings */,
-				29B38B392A843590005CD156 /* README.md */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
