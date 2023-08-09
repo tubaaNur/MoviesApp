@@ -34,6 +34,7 @@
 		293C755C2A82926F0028B2BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		293C755E2A82927F0028B2BB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		29B38B392A843590005CD156 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		29B38B3C2A843A7C005CD156 /* Recording.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Recording.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				29B38B392A843590005CD156 /* README.md */,
+				29B38B3C2A843A7C005CD156 /* Recording.gif */,
 				293C73D32A7C203C0028B2BB /* MoviesApp */,
 				293C73D22A7C203C0028B2BB /* Products */,
 			);
