@@ -6,6 +6,7 @@ The Movie Bucket app is a simple iOS application written in Swift that allows us
 
 
 ##Demo
+
 <img src="https://github.com/tubaaNur/MoviesApp/blob/main/Recording.gif" width="200">
 
 ## Features
