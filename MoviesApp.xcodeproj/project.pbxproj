@@ -33,6 +33,7 @@
 		293C73F12A7C293A0028B2BB /* MoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCell.swift; sourceTree = "<group>"; };
 		293C755C2A82926F0028B2BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		293C755E2A82927F0028B2BB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29B38B392A843590005CD156 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 				293C73DF2A7C203E0028B2BB /* LaunchScreen.storyboard */,
 				293C73E22A7C203E0028B2BB /* Info.plist */,
 				293C755D2A82926F0028B2BB /* Localizable.strings */,
+				29B38B392A843590005CD156 /* README.md */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
